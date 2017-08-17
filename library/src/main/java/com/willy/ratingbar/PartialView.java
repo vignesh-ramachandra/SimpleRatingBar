@@ -3,9 +3,9 @@ package com.willy.ratingbar;
 import android.content.Context;
 import android.graphics.drawable.ClipDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
 import android.view.Gravity;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 /**
@@ -14,8 +14,8 @@ import android.widget.RelativeLayout;
 
 public class PartialView extends RelativeLayout {
 
-    private ImageView mFilledView;
-    private ImageView mEmptyView;
+    private AppCompatImageView mFilledView;
+    private AppCompatImageView mEmptyView;
 
     public PartialView(Context context) {
         super(context);
@@ -33,10 +33,10 @@ public class PartialView extends RelativeLayout {
     }
 
     private void init() {
-        mFilledView = new ImageView(getContext());
-        mFilledView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        mEmptyView = new ImageView(getContext());
-        mEmptyView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        mFilledView = new AppCompatImageView(getContext());
+        mFilledView.setScaleType(AppCompatImageView.ScaleType.CENTER_CROP);
+        mEmptyView = new AppCompatImageView(getContext());
+        mEmptyView.setScaleType(AppCompatImageView.ScaleType.CENTER_CROP);
         addView(mFilledView);
         addView(mEmptyView);
     }
